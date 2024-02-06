@@ -1,0 +1,28 @@
+server:
+  port: 8080 # Порт сервера
+  error:
+    include-message: always # Выводить сообщение в отловленной ошибке
+
+application:
+  reader:
+    max-allowed-books: 3 # настойка максимальное количество книг выданных читателю
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/homework
+    username: root-user
+    password: root
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+
+#spring:
+#  datasource:
+#    url: jdbc:h2:mem:homework
+#    username: sa
+#    password:
+#    driver-class-name: org.h2.Driver
+#  jpa:
+#    hibernate:
+#      ddl-auto: create-drop
